@@ -4,6 +4,7 @@
 
 common_install_packages:
   - apg
+  - bash-completion
   - bind-utils
   - bzip2
   - dkms
