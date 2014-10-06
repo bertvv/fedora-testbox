@@ -6,7 +6,7 @@ Een paar tips/instructies voor het gebruik van deze VM
 
 - Gebruik van het _Internet_ is niet toegelaten
 - Hou de VM altijd in _full screen_ ([RCtrl]+F)
-- Schakel na afloop van de test de VM _volledig uit_, maar laat de pc aan staan.
+- Schakel na afloop van de test de VM _volledig uit_ (`sudo poweroff`), maar laat de pc aan staan.
 
 ## Tips
 
