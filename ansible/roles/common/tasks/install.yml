@@ -24,9 +24,6 @@
     - common
     - install
 
-- name: Update packages
-  yum: pkg=* state=latest
-
 - name: Install extra packages
   yum: pkg={{ item }} state=installed
   with_items: common_install_packages
