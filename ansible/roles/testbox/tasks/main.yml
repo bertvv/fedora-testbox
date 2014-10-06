@@ -3,7 +3,7 @@
 
 - name: Install motd
   copy:
-    content="Lees ~/README.md voor instructies en tips. Veel succes!"
+    content="Lees ~/README.md voor instructies en tips. Veel succes!\n"
     dest=/etc/motd
     mode=0644
     owner=root
