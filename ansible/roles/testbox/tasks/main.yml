@@ -1,0 +1,21 @@
+# roles/testbox/tasks/main.yml
+---
+
+- name: Install motd
+  copy:
+    content="Lees ~/README.md voor instructies en tips. Veel succes!"
+    dest=/etc/motd
+    mode=0644
+    owner=root
+    group=root
+  tags: testbox
+
+- name: Install README.md in student home
+  copy:
+    src=home_student_README.md
+    dest=/home/student/README.md
+    owner=student
+    group=student
+    mode=0644
+  tags: testbox
+

@@ -4,4 +4,5 @@
   sudo: true
   roles:
     - common
+    - testbox
 
