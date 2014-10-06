@@ -10,7 +10,6 @@ common_install_packages:
   - dkms
   - gpm
   - libselinux-python
-  - links
   - man-pages
   - nano
   - psmisc
@@ -19,3 +18,11 @@ common_install_packages:
   - words
   - zip
 
+
+users:
+  - name: student
+    comment: student
+    groups: wheel
+    home: /home/student
+    password: '$6$rZlWxwoRBMjwnPb2$1/G0JbaZLrEuJrwKV7WqtO8VSK7Eu4xwWuJ6mnqQArnMkf2Tj0FcjkVPPixjhtUQal4vX7LFuwCy5NTMfN83Q/'
+      # pwd = student
