@@ -19,3 +19,21 @@
     mode=0644
   tags: testbox
 
+- name: Install vconsole.conf
+  copy:
+    src=etc_vconsole.conf
+    dest=/etc/vconsole.conf
+    owner=root
+    group=root
+    mode=0644
+  tags: testbox
+
+- name: Install Grub configuration
+  copy:
+    src=etc_default_grub
+    dest=/etc/default/grub
+    owner=root
+    group=root
+    mode=0644
+  notify: update grub
+  tags: testbox
