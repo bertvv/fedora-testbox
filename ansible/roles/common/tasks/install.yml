@@ -1,0 +1,42 @@
+# roles/common/tasks/install.yml
+# vi: ft=yaml
+#
+# Install custom repositories and packages. Repositories should be installed
+# using the RPM package. A list of URLs to the RPMs for these repositories
+# should be specified in group_vars or host_vars.
+---
+- name: Custom yum.conf that doesn't keep old kernels
+  copy:
+    src=etc_yum.conf
+    dest=/etc/yum.conf
+    owner=root
+    group=root
+    mode=0644
+  tags:
+    - common
+    - install
+
+- name: Install packages for external repositories
+  yum: pkg={{ item }} state=installed
+  with_items: common_repositories
+  when: common_repositories is defined
+  tags:
+    - common
+    - install
+
+- name: Install extra packages
+  yum: pkg={{ item }} state=installed
+  with_items: common_install_packages
+  when: common_install_packages is defined
+  tags:
+    - common
+    - install
+
+- name: Remove unnecessary packages
+  yum: pkg={{ item }} state=absent
+  with_items: common_remove_packages
+  when: common_remove_packages is defined
+  tags:
+    - common
+    - install
+

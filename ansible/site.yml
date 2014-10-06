@@ -1,0 +1,7 @@
+# site.yml
+---
+- hosts: testlinux
+  sudo: true
+  roles:
+    - common
+

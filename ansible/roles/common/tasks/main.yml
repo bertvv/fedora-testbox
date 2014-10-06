@@ -1,0 +1,11 @@
+# roles/common/main.yml
+---
+- include: install.yml
+- include: config.yml
+- include: users.yml
+- include: admin.yml
+- include: services.yml
+- include: security.yml
+
+
+

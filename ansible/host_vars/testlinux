@@ -1,0 +1,20 @@
+# host_vars/testlinux
+# -*- vi: ft=yaml =*-
+---
+
+common_install_packages:
+  - apg
+  - bind-utils
+  - bzip2
+  - dkms
+  - gpm
+  - libselinux-python
+  - links
+  - man-pages
+  - nano
+  - psmisc
+  - tree
+  - vim-enhanced
+  - words
+  - zip
+

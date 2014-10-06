@@ -1,0 +1,16 @@
+# File: common/tasks/services.yml
+# Make sure the necessary services are enabled
+
+- name: Start SSH
+  service: name=sshd enabled=true state=started
+  tags:
+    - common
+    - services
+
+- name: Stop unnecessary services
+  service: name={{ item }} enabled=false state=stopped
+  with_items: common_stop_services
+  when: common_stop_services is defined
+  tags:
+    - common
+    - services
