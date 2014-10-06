@@ -43,6 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
       node.vm.provider :virtualbox do |vb|
         vb.name = host['name']
+        vb.gui = 'true'
       end
 
       provision_ansible(config, node)
