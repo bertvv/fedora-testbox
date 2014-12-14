@@ -7,14 +7,23 @@ common_install_packages:
   - bash-completion
   - bind-utils
   - bzip2
+  - curl
   - dkms
   - gpm
+  - httpd
   - libselinux-python
   - man-pages
+  - mariadb
+  - mariadb-server
+  - MySQL-python
   - nano
+  - php
+  - php-mysql
+  - php-xml
   - psmisc
   - tree
   - vim-enhanced
+  - wget
   - words
   - zip
 
