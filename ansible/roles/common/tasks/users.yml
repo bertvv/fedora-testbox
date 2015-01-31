@@ -17,8 +17,9 @@
   user:
     name={{ item.name }}
     state=present
-    comment={{ item.comment }}
-    groups={{ item.groups }}
+    comment="{{ item.comment }}"
+    group={{ item.group|default(item.name) }}
+    groups={{ item.groups|default('') }}
     home={{ item.home }}
     password={{ item.password }}
   with_items: users

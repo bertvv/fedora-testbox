@@ -27,6 +27,9 @@ common_install_packages:
   - words
   - zip
 
+user_groups:
+  - pirates
+  - ninjas
 
 users:
   - name: student
@@ -35,3 +38,15 @@ users:
     home: /home/student
     password: '$6$rZlWxwoRBMjwnPb2$1/G0JbaZLrEuJrwKV7WqtO8VSK7Eu4xwWuJ6mnqQArnMkf2Tj0FcjkVPPixjhtUQal4vX7LFuwCy5NTMfN83Q/'
       # pwd = student
+  - name: sparrow
+    comment: 'Jack Sparrow'
+    group: pirates
+    home: /home/sparrow
+    password: '$6$DFUyUuUpqy6Y3apy$ZXbFRjjhyoajAjhH0G58Jyp/Ay7tzu3wm.uUVhJlyFVgvbDZ6FSL.qW4zz114Fv0GTalMMn0M7hvnfFgJAhyf/'
+      # pwd = sparrow
+  - name: fuma
+    group: ninjas
+    home: /home/fuma
+    comment: 'Fuma Kotaro'
+    password: '$6$N6ZoSTBhpH/LIgCc$lFMcFWCBt4ecnN0fiawZx2z6pek6AzEfXb8FxyKKfRDio0OZPgiLwH3K33Tox8ILBXKEKz0wLoGqUU6JQHZuz.'
+      # pwd = fuma
